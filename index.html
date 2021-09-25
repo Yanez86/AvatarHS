@@ -78,32 +78,33 @@
         {
             var canvas = document.getElementById('canvas');
             var ctx = canvas.getContext('2d');
-            canvas.width=2048;                                                 //modifica grandezza dell'immagine
-            canvas.height=2048;
+            canvas.width=1024;                                                 //modifica grandezza dell'immagine
+            canvas.height=1024;
             //wp
-            ctx.drawImage(hsWp,((2048-hsWp.width)/2),50);
+            ctx.drawImage(hsWp,((1024-hsWp.width)/2),50);
             //wp extra
-            ctx.drawImage(hsWpLayer,((2048-hsWpLayer.width)/2),50);
+            ctx.drawImage(hsWpLayer,((1024-hsWpLayer.width)/2),50);
             //back
-             ctx.drawImage(hsBack,((2048-hsBack.width)/2),50);
+             ctx.drawImage(hsBack,((1024-hsBack.width)/2),50);
             //ears
-            ctx.drawImage(hsEars,((2048-hsEars.width)/2),50);
+            ctx.drawImage(hsEars,((1024-hsEars.width)/2),50);
             //head
-            ctx.drawImage(hsHead,((2048-hsHead.width)/2),50);
+            ctx.drawImage(hsHead,((1024-hsHead.width)/2),50);
             //body
-            ctx.drawImage(hsBody,((2048-hsBody.width)/2),50);
+            ctx.drawImage(hsBody,((1024-hsBody.width)/2),50);
             //occhi
-            ctx.drawImage(hsEyes,((2048-hsEyes.width)/2),50);
+            ctx.drawImage(hsEyes,((1024-hsEyes.width)/2),50);
             //bocca
-            ctx.drawImage(hsMouth,((2048-hsMouth.width)/2),50);
+            ctx.drawImage(hsMouth,((1024-hsMouth.width)/2),50);
             //cap
-            ctx.drawImage(hsHat,((2048-hsHat.width)/2),50);
+            ctx.drawImage(hsHat,((1024-hsHat.width)/2),50);
             //capelli
-            ctx.drawImage(hsHairs,((2048-hsHairs.width)/2),50);
+            ctx.drawImage(hsHairs,((1024-hsHairs.width)/2),50);
             //nose
-            ctx.drawImage(hsNose,((2048-hsNose.width)/2),50);
+            ctx.drawImage(hsNose,((1024-hsNose.width)/2),50);
             //more
-            ctx.drawImage(hsMore,((2048-hsMore.width)/2),50);   
+            ctx.drawImage(hsMore,((1024-hsMore.width)/2),50);   
+
         }
 
 
@@ -123,7 +124,7 @@
             document.write("Eyes: "+eyes + "<br>");
             document.write("Mouth: "+mouth + "<br>");
             document.write("Hairs: "+hairs + "<br>");
-            document.write("Body: "+nose + "<br>");
+            document.write("Nose: "+nose + "<br>");
             document.write("Wallpaper: "+wp + "<br>");
             document.write("Ears: "+ears + "<br>");
             document.write("More: "+more + "<br>");
