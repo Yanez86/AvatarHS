@@ -340,7 +340,7 @@ case (rndNumber>0):
         generateToken(rndNumber);
         ears = "Little Ears";
         break;
-        case (rndNumber>1):
+    case (rndNumber>1):
         hsEars.src = "";
         generateToken(rndNumber);
         ears = "Nothing";

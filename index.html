@@ -8,6 +8,44 @@
             left: 15px;
             font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
  }
+        .tokenstyle{
+            background-color: #ff8a04;
+            font-weight:bold;
+            border: none;
+            color: white;
+            padding: 5px 5px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 0.67em;
+            margin: 2px 2px;
+            align: center;
+            margin: 0;
+            top: 25px;
+            font-family: verdana;
+            text-transform: uppercase;
+            position:absolute;
+        }
+        .types{
+            background-color: #000000;
+            font-weight:bold;
+            border: none;
+            color: white;
+            padding: 5px 5px;
+            text-align: left;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 0.67em;
+            margin: 2px 2px;
+            align: center;
+            margin: 0;
+            font-family: verdana;
+            text-transform: uppercase;
+            position:absolute;
+            top:50px;
+            left: 15px;
+            width:170px;
+        }
  </style>
     
 <script>
@@ -112,13 +150,15 @@
 </head>
 <body>
     <div align="center">
-
+        <div class="tokenstyle">
+            <script>document.write("TKN: "+token + "<br>");</script>
+        </div>
         <canvas id="canvas" style="border:0px solid #000000;"></canvas>
         <br><br>
-        <button onClick="window.location.reload();">Genera il tuo cosino</button>
+
 
     </div>
-    <div class="topcorner">
+    <div class="types">
         <script>
             document.write("Head: "+head + "<br>");
             document.write("Eyes: "+eyes + "<br>");
@@ -131,6 +171,7 @@
             document.write("Hat: "+hat + "<br>");
             document.write("Extra: "+wplayer + "<br>");
             document.write("Back: "+backpack + "<br>");
+            
         
         </script>
     </div>
