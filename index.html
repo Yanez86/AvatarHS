@@ -9,68 +9,74 @@
         //testa
         var robothead = new Image();
         var robotheadnum = Math.floor(Math.random()*3)+1;                   //se aumenti il numero di teste cambia il moltiplicatore
-        var robotheadname = "head" + robotheadnum + ".png";
+        var robotheadname = "head/head" + robotheadnum + ".png";
         robothead.src = robotheadname;
 
         //occhi
         var roboteyes = new Image();
         var roboteyesnum = Math.floor(Math.random()*9)+1;                   
-        var roboteyesname = "eyes" + roboteyesnum + ".png";
+        var roboteyesname = "eyes/eyes" + roboteyesnum + ".png";
         roboteyes.src = roboteyesname;
 
         //bocca
         var robotmouth = new Image();
         var robotmouthnum = Math.floor(Math.random()*11)+1;                   
-        var robotmouthname = "mouth" + robotmouthnum + ".png";
+        var robotmouthname = "mouth/mouth" + robotmouthnum + ".png";
         robotmouth.src = robotmouthname;
 
         //capelli
         var robothairs = new Image();
         var robothairsnum = Math.floor(Math.random()*7)+1;                   
-        var robothairsname = "hairs" + robothairsnum + ".png";
+        var robothairsname = "hairs/hairs" + robothairsnum + ".png";
         robothairs.src = robothairsname;
 
         //corpo
         var robotbody = new Image();
         var robotbodynum = Math.floor(Math.random()*7)+1;                   
-        var robotbodyname = "body" + robotbodynum + ".png";
+        var robotbodyname = "body/body" + robotbodynum + ".png";
         robotbody.src = robotbodyname;
 
         //naso
         var robotnose = new Image();
         var robotnosenum = Math.floor(Math.random()*7)+1;                   
-        var robotnosename = "nose" + robotnosenum + ".png";
+        var robotnosename = "nose/nose" + robotnosenum + ".png";
         robotnose.src = robotnosename;
                 
         //wp
         var robotwp = new Image();
         var robotwpnum = Math.floor(Math.random()*6)+1;                   
-        var robotwpname = "wp" + robotwpnum + ".png";
+        var robotwpname = "wp/wp" + robotwpnum + ".png";
         robotwp.src = robotwpname;
 
         //orecchie
         var robotears = new Image();
         var robotearsnum = Math.floor(Math.random()*4)+1;                   
-        var robotearsname = "ears" + robotearsnum + ".png";
+        var robotearsname = "ears/ears" + robotearsnum + ".png";
         robotears.src = robotearsname;
 
         //extra sopra viso
         var robotmore = new Image();
         var robotmorenum = Math.floor(Math.random()*4)+1;                   
-        var robotmorename = "more" + robotmorenum + ".png";
+        var robotmorename = "more/more" + robotmorenum + ".png";
         robotmore.src = robotmorename;
 
         //extra cappelli
         var robotcap = new Image();
         var robotcapnum = Math.floor(Math.random()*2)+1;                   
-        var robotcapname = "cap" + robotcapnum + ".png";
+        var robotcapname = "cap/cap" + robotcapnum + ".png";
         robotcap.src = robotcapname;
 
         //extra wp layer
         var robowpextra = new Image();
-        var robowpextranum = Math.floor(Math.random()*1)+1;                   
-        var robowpextraname = "wplayer" + robowpextranum + ".png";
+        var robowpextranum = Math.floor(Math.random()*2)+1;                   
+        var robowpextraname = "wplayer/wplayer" + robowpextranum + ".png";
         robowpextra.src = robowpextraname;
+
+        // back
+        var robotback = new Image();
+        var robotbacknum = Math.floor(Math.random()*3)+1;                   
+        var robotbackname = "back/back" + robotbacknum + ".png";
+        robotback.src = robotbackname;
 
 
 
@@ -132,6 +138,11 @@
         {
         buildrobot();
         }
+        //back
+        robotback.onload = function()
+        {
+        buildrobot();
+        }
 
 
         function buildrobot()
@@ -149,6 +160,12 @@
             if(rnd > 90)
             {
                 ctx.drawImage(robowpextra,((2048-robowpextra.width)/2),50);
+            }
+            //back
+              rnd = Math.floor(Math.random()*100)+1
+            if(rnd > 40)
+            {
+                ctx.drawImage(robotback,((2048-robotback.width)/2),50);
             }
             //ears
             rnd = Math.floor(Math.random()*100)+1
