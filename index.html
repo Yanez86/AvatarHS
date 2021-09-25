@@ -2,12 +2,10 @@
     <title>HappySquidAvatarGenerator</title>
 	<script type="text/javascript" src="catch.js"></script>
     <style>
-        .topcorner{
-            position:absolute;
-            top:70px;
-            left: 15px;
-            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
- }
+
+        body{
+            background-color:#c1f548;
+        }
         .tokenstyle{
             background-color: #ff8a04;
             font-weight:bold;
@@ -119,29 +117,29 @@
             canvas.width=1024;                                                 //modifica grandezza dell'immagine
             canvas.height=1024;
             //wp
-            ctx.drawImage(hsWp,((1024-hsWp.width)/2),50);
+            ctx.drawImage(hsWp,((1024-hsWp.width)/2),0);
             //wp extra
-            ctx.drawImage(hsWpLayer,((1024-hsWpLayer.width)/2),50);
+            ctx.drawImage(hsWpLayer,((1024-hsWpLayer.width)/2),0);
             //back
-             ctx.drawImage(hsBack,((1024-hsBack.width)/2),50);
+             ctx.drawImage(hsBack,((1024-hsBack.width)/2),0);
             //ears
-            ctx.drawImage(hsEars,((1024-hsEars.width)/2),50);
+            ctx.drawImage(hsEars,((1024-hsEars.width)/2),0);
             //head
-            ctx.drawImage(hsHead,((1024-hsHead.width)/2),50);
+            ctx.drawImage(hsHead,((1024-hsHead.width)/2),0);
             //body
-            ctx.drawImage(hsBody,((1024-hsBody.width)/2),50);
+            ctx.drawImage(hsBody,((1024-hsBody.width)/2),0);
             //occhi
-            ctx.drawImage(hsEyes,((1024-hsEyes.width)/2),50);
+            ctx.drawImage(hsEyes,((1024-hsEyes.width)/2),0);
             //bocca
-            ctx.drawImage(hsMouth,((1024-hsMouth.width)/2),50);
+            ctx.drawImage(hsMouth,((1024-hsMouth.width)/2),0);
             //cap
-            ctx.drawImage(hsHat,((1024-hsHat.width)/2),50);
+            ctx.drawImage(hsHat,((1024-hsHat.width)/2),0);
             //capelli
-            ctx.drawImage(hsHairs,((1024-hsHairs.width)/2),50);
+            ctx.drawImage(hsHairs,((1024-hsHairs.width)/2),0);
             //nose
-            ctx.drawImage(hsNose,((1024-hsNose.width)/2),50);
+            ctx.drawImage(hsNose,((1024-hsNose.width)/2),0);
             //more
-            ctx.drawImage(hsMore,((1024-hsMore.width)/2),50);   
+            ctx.drawImage(hsMore,((1024-hsMore.width)/2),0);   
 
         }
 
@@ -153,7 +151,7 @@
         <div class="tokenstyle">
             <script>document.write("TKN: "+token + "<br>");</script>
         </div>
-        <canvas id="canvas" style="border:0px solid #000000;"></canvas>
+        <canvas id="canvas" style="border:4px solid #000000; top:50px"></canvas>
         <br><br>
 
 
@@ -174,5 +172,7 @@
             
         
         </script>
+
+        
     </div>
 </body>

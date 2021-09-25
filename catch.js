@@ -330,6 +330,11 @@ case (rndNumber>0):
         generateToken(rndNumber);
         ears = "Golbin";
         break;
+    case (rndNumber>70):
+        hsEars.src = "ears/headphones.png"
+        generateToken(rndNumber);
+        ears = "Headphones";
+        break;
     case (rndNumber>55):
         hsEars.src = "ears/horns.png";
         generateToken(rndNumber);
@@ -351,6 +356,11 @@ case (rndNumber>0):
     //---------------------------------------------MORE  CASE -------------------------------------------------------------
     rndNumber = Math.floor(Math.random()*100)+1 //restituisce un numero da 1 a 100 casualmente
     switch(true){
+    case (rndNumber > 99):
+        hsMore.src = "more/censored.png";
+        generateToken();
+        more = "Censored";
+        break;
     case (rndNumber>90):
         hsMore.src = "more/bigglasses.png";
         generateToken(rndNumber);
