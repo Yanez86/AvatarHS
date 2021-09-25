@@ -1,7 +1,14 @@
 <head>
     <title>HappySquidAvatarGenerator</title>
 	<script type="text/javascript" src="catch.js"></script>
-
+    <style>
+        .topcorner{
+            position:absolute;
+            top:70px;
+            left: 15px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+ }
+ </style>
     
 <script>
 
@@ -105,9 +112,25 @@
 <body>
     <div align="center">
 
-        <canvas id="canvas" style="border:5px solid #000000;"></canvas>
+        <canvas id="canvas" style="border:0px solid #000000;"></canvas>
         <br><br>
         <button onClick="window.location.reload();">Genera il tuo cosino</button>
 
+    </div>
+    <div class="topcorner">
+        <script>
+            document.write("Head: "+head + "<br>");
+            document.write("Eyes: "+eyes + "<br>");
+            document.write("Mouth: "+mouth + "<br>");
+            document.write("Hairs: "+hairs + "<br>");
+            document.write("Body: "+nose + "<br>");
+            document.write("Wallpaper: "+wp + "<br>");
+            document.write("Ears: "+ears + "<br>");
+            document.write("More: "+more + "<br>");
+            document.write("Hat: "+hat + "<br>");
+            document.write("Extra: "+wplayer + "<br>");
+            document.write("Back: "+backpack + "<br>");
+        
+        </script>
     </div>
 </body>
