@@ -145,8 +145,7 @@
             ctx.drawImage(robotbody,((2048-robotbody.width)/2),50);
             //occhi
             ctx.drawImage(roboteyes,((2048-roboteyes.width)/2),50);
-            //bocca
-            ctx.drawImage(robotmouth,((2048-robotmouth.width)/2),50);
+
             //cap
             rnd = Math.floor(Math.random()*100)+1
             if(rnd>90)
@@ -155,8 +154,13 @@
             }
             //capelli
             ctx.drawImage(robothairs,((2048-robothairs.width)/2),50);
+
+            //bocca
+            ctx.drawImage(robotmouth,((2048-robotmouth.width)/2),50);
+
             //nose
             ctx.drawImage(robotnose,((2048-robotnose.width)/2),50);
+            
             //more
             rnd = Math.floor(Math.random()*100)+1
             if(rnd > 90)
