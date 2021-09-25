@@ -20,7 +20,7 @@
 
         //bocca
         var robotmouth = new Image();
-        var robotmouthnum = Math.floor(Math.random()*10)+1;                   
+        var robotmouthnum = Math.floor(Math.random()*11)+1;                   
         var robotmouthname = "mouth" + robotmouthnum + ".png";
         robotmouth.src = robotmouthname;
 
@@ -65,6 +65,12 @@
         var robotcapnum = Math.floor(Math.random()*2)+1;                   
         var robotcapname = "cap" + robotcapnum + ".png";
         robotcap.src = robotcapname;
+
+        //extra wp layer
+        var robowpextra = new Image();
+        var robowpextranum = Math.floor(Math.random()*1)+1;                   
+        var robowpextraname = "wplayer" + robowpextranum + ".png";
+        robowpextra.src = robowpextraname;
 
 
 
@@ -121,6 +127,11 @@
         {
         buildrobot();
         }
+        //wp extra
+        robowpextra.onload = function()
+        {
+        buildrobot();
+        }
 
 
         function buildrobot()
@@ -133,6 +144,12 @@
 
             //wp
             ctx.drawImage(robotwp,((2048-robotwp.width)/2),50);
+            //wp extra
+            rnd = Math.floor(Math.random()*100)+1
+            if(rnd > 90)
+            {
+                ctx.drawImage(robowpextra,((2048-robowpextra.width)/2),50);
+            }
             //ears
             rnd = Math.floor(Math.random()*100)+1
             if(rnd > 90)
@@ -176,7 +193,7 @@
 <body>
     <div align="center">
 
-        <canvas id="canvas" style="border:5px solid #000000;"></canvas>
+        <canvas id="canvas" style="border:0px solid #000000;"></canvas>
         <br><br>
         <button onClick="window.location.reload();">Genera il tuo cosetto</button>
 
