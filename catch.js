@@ -13,6 +13,8 @@
         let hat = "";
         let wplayer = "";
         let backpack = "";
+        let dependandt = "";
+        let dependantAlpha = 1; //setta valore di opacity per un determinato elemento - default 1 no opacity, 0 - invisibile
 //le variabili EXCLUDED settate a TRUE inibiscono il draw dell'elemento di riferimento
         let excludeHead = false;
         let excludeEyes = false;
@@ -26,6 +28,7 @@
         let excludeHat = false;
         let excludeWplayer = false;
         let excludeBackpack = false;
+        let excludeDependant = false;
 
         var hsHead = new Image();  
         var hsEyes = new Image();
@@ -39,6 +42,7 @@
         var hsHat = new Image();
         var hsWpLayer = new Image();
         var hsBack = new Image();
+        var hsDependant = new Image();
 //---------------------------------------------HEADS  CASE -------------------------------------------------------------
 rndNumber = Math.floor(Math.random()*100)+1 //restituisce un numero da 1 a 100 casualmente
 switch(true){
@@ -406,6 +410,13 @@ case (rndNumber>0):
     //---------------------------------------------HAT  CASE -------------------------------------------------------------
     rndNumber = Math.floor(Math.random()*100)+1 //restituisce un numero da 1 a 100 casualmente
     switch(true){
+    case (rndNumber > 0 && hsDependant.src == ""): //verifica che non ci siano altre immagini con dependant 
+        hsHat.src = "hat/astronaut.png";
+        hat = "Astronaut";
+        excludeHairs = true;
+        hsDependant.src = "hat/astronaut2.png";
+        dependantAlpha = 0.6;
+        break;
     case (rndNumber > 97):
         hsHat.src = "hat/piratehat.png";
         generateToken(rndNumber);

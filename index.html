@@ -107,6 +107,10 @@
         {
             buildrobot();
         }
+        hsDependant.onload = function()
+        {
+            buildrobot();
+        }
 
         function buildrobot()
         {
@@ -137,7 +141,12 @@
             //nose
             if (!(excludeNose)) {ctx.drawImage(hsNose,((1024-hsNose.width)/2),0);};
             //more
-            if (!(excludeMore)) {ctx.drawImage(hsMore,((1024-hsMore.width)/2),0); };  
+            if (!(excludeMore)) {ctx.drawImage(hsMore,((1024-hsMore.width)/2),0); }; 
+            //dependant
+            if (!(excludeDependant)) {
+                ctx.globalAlpha = dependantAlpha;
+                ctx.drawImage(hsDependant,((1024-hsDependant.width)/2),0);
+            }; 
 
         }
 
