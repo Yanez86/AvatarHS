@@ -410,7 +410,7 @@ case (rndNumber>0):
     //---------------------------------------------HAT  CASE -------------------------------------------------------------
     rndNumber = Math.floor(Math.random()*100)+1 //restituisce un numero da 1 a 100 casualmente
     switch(true){
-    case (rndNumber > 0 && hsDependant.src == ""): //verifica che non ci siano altre immagini con dependant 
+    case (rndNumber > 99 && hsDependant.src == ""): //verifica che non ci siano altre immagini con dependant 
         hsHat.src = "hat/astronaut.png";
         hat = "Astronaut";
         excludeHairs = true;
