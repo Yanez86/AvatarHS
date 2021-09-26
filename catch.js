@@ -13,7 +13,7 @@
         let hat = "";
         let wplayer = "";
         let backpack = "";
-        let dependandt = "";
+        let dependandt = "";            //forse non serve
         let dependantAlpha = 1; //setta valore di opacity per un determinato elemento - default 1 no opacity, 0 - invisibile
 //le variabili EXCLUDED settate a TRUE inibiscono il draw dell'elemento di riferimento
         let excludeHead = false;
@@ -374,9 +374,16 @@ case (rndNumber>0):
     //---------------------------------------------MORE  CASE -------------------------------------------------------------
     rndNumber = Math.floor(Math.random()*100)+1 //restituisce un numero da 1 a 100 casualmente
     switch(true){
-    case (rndNumber > 99):
+    case (rndNumber > 99 && hsDependant.src == ""):
+        hsMore.src = "more/visor.png";
+        generateToken(rndNumber);
+        more = "Visor";
+        hsDependant.src = "more/visor2.png";
+        dependantAlpha = 0.6;
+        break;
+    case (rndNumber > 98):
         hsMore.src = "more/censored.png";
-        generateToken();
+        generateToken(rndNumber);
         more = "Censored";
         break;
     case (rndNumber>90):
@@ -412,10 +419,12 @@ case (rndNumber>0):
     switch(true){
     case (rndNumber > 99 && hsDependant.src == ""): //verifica che non ci siano altre immagini con dependant 
         hsHat.src = "hat/astronaut.png";
+        generateToken(rndNumber);
         hat = "Astronaut";
         excludeHairs = true;
         hsDependant.src = "hat/astronaut2.png";
         dependantAlpha = 0.6;
+        
         break;
     case (rndNumber > 97):
         hsHat.src = "hat/piratehat.png";
