@@ -13,6 +13,20 @@
         let hat = "";
         let wplayer = "";
         let backpack = "";
+//le variabili EXCLUDED settate a TRUE inibiscono il draw dell'elemento di riferimento
+        let excludeHead = false;
+        let excludeEyes = false;
+        let excludeMouth = false;
+        let excludeHairs = false;
+        let excludeBody = false;
+        let excludeNose = false;
+        let excludeWp = false;
+        let excludeEars = false;
+        let excludeMore = false;
+        let excludeHat = false;
+        let excludeWplayer = false;
+        let excludeBackpack = false;
+
         var hsHead = new Image();  
         var hsEyes = new Image();
         var hsMouth = new Image();
@@ -392,6 +406,12 @@ case (rndNumber>0):
     //---------------------------------------------HAT  CASE -------------------------------------------------------------
     rndNumber = Math.floor(Math.random()*100)+1 //restituisce un numero da 1 a 100 casualmente
     switch(true){
+    case (rndNumber > 97):
+        hsHat.src = "hat/piratehat.png";
+        generateToken(rndNumber);
+        hat = "Pirate Hat";
+        excludeHairs = true;
+        break;
     case (rndNumber>90):
         hsHat.src = "hat/happy.png";
         generateToken(rndNumber);
