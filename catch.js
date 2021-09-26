@@ -426,11 +426,10 @@ case (rndNumber>0):
         dependantAlpha = 0.6;
         
         break;
-    case (rndNumber > 97):
+    case (rndNumber > 98):
         hsHat.src = "hat/piratehat.png";
         generateToken(rndNumber);
         hat = "Pirate Hat";
-        excludeHairs = true;
         break;
     case (rndNumber>90):
         hsHat.src = "hat/happy.png";
