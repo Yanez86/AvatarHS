@@ -1,12 +1,12 @@
 # AvatarHS
 
-Simple random avatar generator versione 0.01
+Simple random avatar generator versione 0.02
 
 Author: Yanez
 Language: italian
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------
-File index.html
+File builder.js
 ----------------------------------------------------------------------------------------------------------------------------------------------------
 è presente il codice per disegnare l'immagine su schermo.
 L'immagine png viene caricata nel canvas a meno che la variabile exclude - suffix (es. excludeHat) sia vera.

@@ -1,167 +1,22 @@
 <head>
     <title>HappySquidAvatarGenerator</title>
 	<script type="text/javascript" src="catch.js"></script>
-    <style>
-
-        body{
-            background-color:#efffc8;
-        }
-        .tokenstyle{
-            background-color: #ff8a04;
-            font-weight:bold;
-            border: none;
-            color: white;
-            padding: 5px 5px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 0.67em;
-            margin: 2px 2px;
-            margin: 0;
-            top: 25px;
-            font-family: verdana;
-            text-transform: uppercase;
-            position:absolute;
-        }
-        .types{
-            background-color: #000000;
-            font-weight:bold;
-            border: none;
-            color: white;
-            padding: 5px 5px;
-            text-align: left;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 0.67em;
-            margin: 2px 2px;
-            margin: 0;
-            font-family: verdana;
-            text-transform: uppercase;
-            position:absolute;
-            top:50px;
-            left: 15px;
-            width:170px;
-        }
- </style>
+    <script type="text/javascript" src="builder.js"></script>
+    <link href="style.css" rel="stylesheet" type="text/css">
     
 <script>
-
-        console.log("load window");
-        //testa carica
-        hsHead.onload = function()
-        {
+        window.addEventListener('load', (event) => {
             buildrobot();
-        }
-        //occhi carica
-        hsEyes.onload = function()
-        {
-            buildrobot();
-        }
-        //bocca carica
-        hsMouth.onload = function()
-        {
-            buildrobot();
-        }
-        //CAPELLI carica
-        hsHairs.onload = function()
-        {
-            buildrobot();
-        }
-        //body carica
-        hsBody.onload = function()
-        {
-            buildrobot();
-        }
-        //nose carica
-        hsNose.onload = function()
-        {
-            buildrobot();
-        }
-        //wp carica
-        hsWp.onload = function()
-        {
-            buildrobot();
-        }
-        //ears carica
-        hsEars.onload = function()
-        {
-            buildrobot();
-        }
-        //extra carica
-        hsMore.onload = function()
-        {
-            buildrobot();
-        }       
-        //cap carica
-        hsHat.onload = function()
-        {
-            buildrobot();
-        }
-        //wp extra
-        hsWpLayer.onload = function()
-        {
-            buildrobot();
-        }
-        //back
-        hsBack.onload = function()
-        {
-            buildrobot();
-        }
-        hsDependant.onload = function()
-        {
-            buildrobot();
-        }
-
-        function buildrobot()
-        {
-            var canvas = document.getElementById('canvas');
-            var ctx = canvas.getContext('2d');
-            canvas.width=1024;                                                 //modifica grandezza dell'immagine
-            canvas.height=1024;
-            //wp
-            if (!(excludeWp)) {ctx.drawImage(hsWp,((1024-hsWp.width)/2),0);};
-            //wp extra
-            if (!(excludeWplayer)) {ctx.drawImage(hsWpLayer,((1024-hsWpLayer.width)/2),0);};
-            //back
-            if (!(excludeBackpack)) {ctx.drawImage(hsBack,((1024-hsBack.width)/2),0);};
-            //ears
-            if (!(excludeEars)) {ctx.drawImage(hsEars,((1024-hsEars.width)/2),0);};
-            //head
-            if (!(excludeHead)) {ctx.drawImage(hsHead,((1024-hsHead.width)/2),0);};
-            //body
-            if (!(excludeBody)) {ctx.drawImage(hsBody,((1024-hsBody.width)/2),0);};
-            //occhi
-            if (!(excludeEyes)) {ctx.drawImage(hsEyes,((1024-hsEyes.width)/2),0);};
-            //bocca
-            if (!(excludeMouth)) {ctx.drawImage(hsMouth,((1024-hsMouth.width)/2),0);};
-             //capelli
-            if (!(excludeHairs)) {ctx.drawImage(hsHairs,((1024-hsHairs.width)/2),0);};
-            //cap
-            if (!(excludeHat)) {ctx.drawImage(hsHat,((1024-hsHat.width)/2),0);};
-            //nose
-            if (!(excludeNose)) {ctx.drawImage(hsNose,((1024-hsNose.width)/2),0);};
-            //more
-            if (!(excludeMore)) {ctx.drawImage(hsMore,((1024-hsMore.width)/2),0); }; 
-            //dependant
-            if (!(excludeDependant)) {
-                ctx.globalAlpha = dependantAlpha;
-                ctx.drawImage(hsDependant,((1024-hsDependant.width)/2),0);
-            }; 
-
-        }
-
-
+        });
 </script>
 </head>
 <body>
+
     <div align="center">
         <div class="tokenstyle">
             <script>document.write("TKN: "+token + "<br>");</script>
         </div>
         <canvas id="canvas" style="border:4px solid #000000; top:50px"></canvas>
-        <br><br>
-
-
     </div>
     <div class="types">
         <script>
@@ -175,11 +30,7 @@
             document.write("More: "+more + "<br>");
             document.write("Hat: "+hat + "<br>");
             document.write("Extra: "+wplayer + "<br>");
-            document.write("Back: "+backpack + "<br>");
-            
-        
-        </script>
-
-        
+            document.write("Back: "+backpack + "<br>"); 
+        </script>  
     </div>
 </body>

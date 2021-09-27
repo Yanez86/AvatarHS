@@ -1,0 +1,40 @@
+
+        body{
+            background-color:#efffc8;
+        }
+        .tokenstyle{
+            background-color: #ff8a04;
+            font-weight:bold;
+            border: none;
+            color: white;
+            padding: 5px 5px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 0.67em;
+            margin: 2px 2px;
+            margin: 0;
+            top: 25px;
+            font-family: verdana;
+            text-transform: uppercase;
+            position:absolute;
+        }
+        .types{
+            background-color: #000000;
+            font-weight:bold;
+            border: none;
+            color: white;
+            padding: 5px 5px;
+            text-align: left;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 0.67em;
+            margin: 2px 2px;
+            margin: 0;
+            font-family: verdana;
+            text-transform: uppercase;
+            position:absolute;
+            top:50px;
+            left: 15px;
+            width:170px;
+        }
