@@ -2,6 +2,10 @@
         body{
             background-color:#efffc8;
         }
+        canvas{
+            border:4px solid #000000; 
+            top:50px
+        }
         .tokenstyle{
             background-color: #ff8a04;
             font-weight:bold;
